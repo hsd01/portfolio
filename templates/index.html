@@ -1,0 +1,304 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hello, I'm <span>Hemant Singh Dhanwar</span></h1>
+        <p>DEVOPS | Python Developer | Portfolio Web Developer</p>
+        <a href="#contact" class="btn">contact</a>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='profile/profile.jpg') }}" alt="Profile">
+    </div>
+</section>
+
+<section id="about" class="section about-section animate">
+    <div class="about-container">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <img src="{{ url_for('static', filename='profile/profile.jpg') }}" alt="Hemant Singh Dhanwar" class="profile-img">
+            <h3>Hemant Singh Dhanwar</h3>
+            <p>DevOps Engineer | Python Developer | Web Developer</p>
+        </div>
+
+        <!-- About Text -->
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate <strong>DevOps Engineer</strong> and <strong>Python Developer</strong> with extensive experience in modern web technologies, cloud computing, and IoT projects. I enjoy building efficient, scalable, and automated solutions that solve real-world problems.
+            </p>
+            <p>
+                My expertise includes <strong>Python programming, DevOps automation, Docker & Kubernetes, CI/CD pipelines, cloud infrastructure, and IoT solutions</strong>. I continuously learn new technologies to stay ahead and deliver top-quality solutions.
+            </p>
+            <p>
+                Beyond coding, I enjoy <strong>problem-solving, collaborating on innovative projects, and mentoring aspiring developers</strong>.
+            </p>
+
+            <!-- Skill Badges -->
+            <div class="about-skills">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">DevOps</span>
+                <span class="skill-badge">Docker</span>
+                <span class="skill-badge">Kubernetes</span>
+                <span class="skill-badge">CI/CD</span>
+                <span class="skill-badge">IoT</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Wave Background -->
+    <div class="wave-bg">
+        <svg viewBox="0 0 1440 120">
+            <path fill="#00adb5" fill-opacity="0.2" d="M0,80 C360,150 1080,10 1440,80 L1440,0 L0,0 Z"></path>
+        </svg>
+    </div>
+</section>
+
+
+
+<!--section id="skills" class="section"-->
+<section id="skills" class="section animate">
+    <h2>Skills</h2>
+    <div class="skills-horizontal">
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/devops.png') }}" alt="DevOps Logo" class="skill-logo">
+            <span>DEVOPS</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/python.jpg') }}" alt="Python Logo" class="skill-logo">
+            <span>Python</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/groovy.png') }}" alt="Groovy Logo" class="skill-logo">
+            <span>Groovy</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/shell.png') }}" alt="Shell Logo" class="skill-logo">
+            <span>Shell | Bash</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/jenkins.jpg') }}" alt="Jenkins Logo" class="skill-logo">
+            <span>Jenkins</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/sql.png') }}" alt="SQL Logo" class="skill-logo">
+            <span>SQL</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/git.png') }}" alt="Git Logo" class="skill-logo">
+            <span>Git</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/iot.png') }}" alt="IoT Logo" class="skill-logo">
+            <span>IoT</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/docker.png') }}" alt="Docker Logo" class="skill-logo">
+            <span>Docker</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/grafana.png') }}" alt="Grafana Logo" class="skill-logo">
+            <span>Grafana</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/bd.png') }}" alt="Prometheus Logo" class="skill-logo">
+            <span>Prometheus | InfluxDB | MySQL | MongoDB</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/ansible.png') }}" alt="Ansible Logo" class="skill-logo">
+            <span>Ansible</span>
+        </div>
+
+        <div class="skill-card">
+            <img src="{{ url_for('static', filename='logos/kubernetes.png') }}" alt="Kubernetes Logo" class="skill-logo">
+            <span>Kubernetes</span>
+        </div>
+
+    </div>
+</section>
+
+<script>
+// Optional: auto-scroll effect
+const skillContainer = document.querySelector('.skills-horizontal');
+let scrollAmount = 0;
+
+function autoScroll() {
+    scrollAmount += 1;
+    if(scrollAmount >= skillContainer.scrollWidth - skillContainer.clientWidth){
+        scrollAmount = 0;
+    }
+    skillContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+}
+
+setInterval(autoScroll, 50);
+</script>
+
+
+
+<!--section id="education" class="section"-->
+<!--section id="education" class="section animate">
+    <h2>Education & Certificates</h2>
+    <div class="info-box">
+        <p><strong>Masters Degree:</strong> IoT</p>
+        <p><strong>University:</strong> DAVV University</p>
+        <p><strong>Certificates:</strong> Python, Data science</p>
+    </div>
+    <div class="info-box">
+        <p><strong>Degree:</strong> Bachelor in Electronic and Telicommunication</p>
+        <p><strong>University:</strong> IET DAVV University</p>
+        <p><strong>Certificates:</strong> Python, Data science</p>
+    </div>
+</section-->
+<section id="education" class="section animate">
+    <h2>Education & Certificates</h2>
+
+    <div class="education-container">
+
+        <!-- Masters Degree Card -->
+        <div class="edu-card">
+            <h3>Masters Degree: IoT</h3>
+            <p><strong>University:</strong> DAVV University</p>
+        </div>
+
+        <!-- Bachelor Degree Card -->
+        <div class="edu-card">
+            <h3>Bachelor: Electronic & Telecommunication</h3>
+            <p><strong>University:</strong> IET DAVV University</p>
+            <p><strong>Certificates:</strong></p>
+        </div>
+        
+
+    </div>
+    <div class="education-container">
+        <div class="edu-card">
+            <h3>Certificates</h3>
+            <div class="certificates">
+                <a href="{{ url_for('static', filename='certs/cert1.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='certs/cert1.jpg') }}" alt="Python Certificate">
+                </a>
+                <a href="{{ url_for('static', filename='certs/cert2.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='certs/cert2.jpg') }}" alt="Data Science Certificate">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+<!--section id="experience" class="section"-->
+<section id="experience" class="section animate">
+    <h2>Work Experience</h2>
+    <div class="timeline-container">
+
+        <div class="timeline-card current">
+            <h3>DEVOPS Engineer with Python automation</h3>
+            <p>Elektrobit (October 2022 - Present)</p>
+        </div>
+
+        <div class="timeline-card past">
+            <h3>DevOps with Python</h3>
+            <p>Dew Software (contract to Lucid Motors) (2021 - 2022)</p>
+        </div>
+
+        <div class="timeline-card past">
+            <h3>R and D Engineer</h3>
+            <p>BitByte Robotronix (2019 - 2020)</p>
+        </div>
+
+        <div class="timeline-card past">
+            <h3>Image Processing Engineer</h3>
+            <p>Bitmapper Integrations Technology Pvt Ltd (Trainee May 2019 - Sept 2019)</p>
+        </div>
+
+        <div class="timeline-card past">
+            <h3>Python Developer | Trainer | Humanoid Developer</h3>
+            <p>Freelancer | Trainer | Teacher (2018 - 2019)</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!--section id="projects" class="section"-->
+<section id="projects" class="section animate">
+    <h2>Projects</h2>
+    <div class="card-container">
+        <div class="card">Grafana server, health monitoring and alert notification</div>
+        <div class="card">Cloudflare tunneling ssh applications</div>
+        <div class="card">Portfolio and information Website in docker env</div>
+        <div class="card">k3s cluster initiation and mantenance</div>
+        <div class="card">Server mentainance, Monitoring 70+ via Grafana</div>
+        <div class="card">Jenkins mentainance automation</div>
+        <div class="card">Setting up private vpn and tunneling </div>
+        <div class="card">pwm signal generator for raspberry pis'</div>
+        <div class="card">Home lab server and network setup</div>
+        <div class="card">Jama cloud automation</div>
+        <div class="card">Humanoid vision and object recognition</div>
+        <div class="card">communication with wsn nodes for various nodes</div>
+        <div class="card">IoT Home automation with MQTT and wsn</div>
+        <div class="card">IoT Armed vehicle</div>
+        <div class="card">Library Management system application for bare metal system</div>
+        <div class="card">smart lights with no memory</div>
+    </div>
+</section>
+
+<!--section id="contact" class="section"-->
+<section id="contact" class="section animate">
+    <h2>Contact Me</h2>
+
+    <div class="contact-glass">
+
+        <!-- Floating Social Icons -->
+        <div class="floating-icons">
+            <a href="https://linkedin.com/in/hemant-singh-d-85a2b1150/" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/hsd01" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p>
+                <i class="fas fa-envelope"></i>
+                <span id="emailText">hemant@dhanwars.in</span>
+                <button onclick="copyEmail()" class="copy-btn">Copy</button>
+            </p>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+918962307327">+91 89623 07327</a>
+            </p>
+        </div>
+
+        <!-- Contact Form -->
+        <form method="POST" action="/send" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="gradient-btn">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+
+{% endblock %}
