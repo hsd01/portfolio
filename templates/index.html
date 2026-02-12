@@ -204,35 +204,76 @@ setInterval(autoScroll, 50);
 <!--section id="experience" class="section"-->
 <section id="experience" class="section animate">
     <h2>Work Experience</h2>
-    <div class="timeline-container">
-
-        <div class="timeline-card current">
+    <!--div class="timeline-container"-->        
+        <div class="timeline-card current" onclick="toggleExperience(this)">
             <h3>DEVOPS Engineer with Python automation</h3>
             <p>Elektrobit (October 2022 - Present)</p>
+            <span class="arrow">&#9662;</span>
+            <div class="timeline-details">
+                <ul>
+                    <li>Working as DevOps Engineer role is handling pipeline and scaling tools like Jenkins, Docker, grafana, Nodes update. Python, groovy, shell, bat scripting, play a vital role in developing scalable CI/CD pipelines. Managing credentials and Nodes hardware where Jenkins runs job.</li>
+                    <li>Automating repeated tasks like server monitoring and notification model, Jenkins maintenances and reboot process.</li>
+                    <li>Doing ASPICE compliance and misra rules violation test, static code analysis.</li> 
+                    <li>Automated CI/CD pipelines using Jenkins & GitLab</li>
+                    <li>Managed Docker & Kubernetes deployments</li>
+                    <li>Implemented monitoring with Grafana & Prometheus</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="timeline-card past">
+        <div class="timeline-card past" onclick="toggleExperience(this)">
             <h3>DevOps with Python</h3>
-            <p>Dew Software (contract to Lucid Motors) (2021 - 2022)</p>
+            <p>Dew Software (2021 - 2022)</p>
+            <span class="arrow">&#9662;</span>
+            <div class="timeline-details">
+                <ul>
+                    <li>DEW software worked for client Lucid Motors for contractual role by handeling automation and scaling tools like Jenkins and Docker.</li>
+                    <li> Automated CI/CD pipelines using Jenkins & GitLab, Automated jama cloud for MIL and SIL reports updation.</li>
+                    <li>Python and c++ played a vital role in developing scalable CI/CD pipelines to automate data collection jobs, generating report statics and verification.</li>
+                    <li>Developed Python automation scripts and develop a tool to check binery before flash to vehicles.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="timeline-card past">
-            <h3>R and D Engineer</h3>
+        <div class="timeline-card past" onclick="toggleExperience(this)">
+            <h3>Research and development Engineer</h3>
             <p>BitByte Robotronix (2019 - 2020)</p>
+            <span class="arrow">&#9662;</span>
+            <div class="timeline-details">
+                <ul>
+                    <li>Worked on Humanoid robot, enabling it to walk, talk, see and recognize things.</li> 
+                    <li>Developed couple of hardware to easy interface actuator and sensors.</li> 
+                    <li>Wrote python script to manage whole robot, including vision and talking Knowledge used such as IoT MQTT protocols, Wired protocols to connect sensor and boards, WiFi protocols for accessing Internet for robot. </li>
+                    <li>Home automation via voice command, developed hardware for node M2M communication, worked on protocol such as MQTT, SPI, I2C, WiFi, BLE</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="timeline-card past">
+        <div class="timeline-card past" onclick="toggleExperience(this)">
             <h3>Image Processing Engineer</h3>
             <p>Bitmapper Integrations Technology Pvt Ltd (Trainee May 2019 - Sept 2019)</p>
+            <span class="arrow">&#9662;</span>
+            <div class="timeline-details">
+                <ul>
+                    <li>Assigned role was to take image from image sensor or camera on toradex development board and process it, it’s major focus on geometry, shape, pattern, goal was to recognize certain laser spots in I.MX6 processor.</li> 
+                    <li>Developed program which recognize certain shapes and laser radicle.</li> 
+                    <li>Wrote Computer Vision code to recognize shape and set trajectory in tank and UAV collected data to refine Knowledge used in Computer vision.</li> 
+                </ul>
+            </div>
         </div>
 
         <div class="timeline-card past">
-            <h3>Python Developer | Trainer | Humanoid Developer</h3>
+            <h3>Python Developer | Trainer | Robotics Teacher</h3>
             <p>Freelancer | Trainer | Teacher (2018 - 2019)</p>
         </div>
 
     </div>
 </section>
+<script>
+function toggleExperience(card) {
+    card.classList.toggle("active");
+}
+</script>
 
 
 <!--section id="projects" class="section"-->

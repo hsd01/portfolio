@@ -982,3 +982,45 @@ body {
         flex-direction: column;
     }
 }
+
+.timeline-card {
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    background: #2a2a2a;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 0;
+}
+
+.timeline-card.active .timeline-details {
+    max-height: 300px;
+    margin-top: 10px;
+}
+
+.timeline-card.active .arrow {
+    transform: rotate(180deg);
+}

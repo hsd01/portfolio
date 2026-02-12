@@ -34,7 +34,7 @@ def send():
     message = request.form['message']
 
     msg = Message(
-        subject=f"Portfolio Contact from {name}",
+        subject=f"Portfolio Contact from {name}, contact {email}",
         sender=email,
         recipients=['hemant@dhanwars.in'],
         body=message
